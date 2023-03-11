@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-radio-group [(ngModel)]="sexo">
+      <ion-list-header>Escolha o sexo:</ion-list-header>
+      <ion-item>
+        <ion-label>Homem</ion-label>
+        <ion-radio value="homem"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mulher</ion-label>
+        <ion-radio value="mulher"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item>
+    <ion-label position="floating">Altura (metros)</ion-label>
+    <ion-input [(ngModel)]="altura" type="number"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="calcularPesoIdeal()">Calcular</ion-button>
+
+  <ion-item>
+    <ion-label position="floating">Peso ideal</ion-label>
+    <ion-input [readonly]="true" value="{{pesoIdeal}}"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="radioSelecionada">
+      <ion-list-header>Escolha uma opção:</ion-list-header>
+      <ion-item>
+        <ion-label>Pix</ion-label>
+        <ion-radio value="option1"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Débito</ion-label>
+        <ion-radio value="option2"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Crédito</ion-label>
+        <ion-radio value="option3"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item>
+    <ion-label position="floating">Valor</ion-label>
+    <ion-input [(ngModel)]="numero" type="number"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="pagar()">Calcular</ion-button>
+
+  <ion-item>
+    <ion-label position="floating">Valor final</ion-label>
+    <ion-input [readonly]="true" value="{{valorFinal2}}"></ion-input>
+  </ion-item>
+
+</ion-content>
